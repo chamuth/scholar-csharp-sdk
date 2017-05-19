@@ -1,0 +1,10 @@
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\Scholar.dll
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\Scholar.pdb
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\RestSharp.dll
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\bin\Debug\RestSharp.xml
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\obj\Debug\Scholar.csprojResolveAssemblyReference.cache
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\obj\Debug\Scholar.dll
+C:\Users\Chamuth\documents\Visual Studio 2015\Projects\AISA\Scholar\obj\Debug\Scholar.pdb
