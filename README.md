@@ -5,3 +5,9 @@ As Scholar lets you join classes, write MCQ and essay type questions, read notes
 
 ### SDK Usage
 <em>This project is built as a .NET Dynamic Link Library (DLL) which includes all the SDK functions and entities to work with Scholar.</em>
+
+### SDK Functionality
+* Get Public Information on Classes, Students and Teachers (incl. Firstname, Lastname, email, qualifications)
+* Verify class ownership or attendance
+* Verify student / teacher existance
+* Searching Class using Class Category, Grade and Teacher
