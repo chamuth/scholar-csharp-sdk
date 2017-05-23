@@ -15,7 +15,20 @@ namespace Scholar
         {
             return new Request<Teacher>("teacher/" + username).Send();
         }
+
+        public static Classes GetClasses(string username)
+        {
+            return new Request<Classes>("teacher/" + username + "/classes").Send();
+        }
     }
+
+    public class Classes
+    {
+        public int error { get; set; }
+        public string[] classes { get; set; }
+        public string message { get; set; }
+    }
+
 
     public class Information
     {
@@ -27,6 +40,9 @@ namespace Scholar
 
     public sealed class Student
     {
+        public int error { get; set; }
+        public Information information { get; set; }
+
         public class Verify
         {
             public int error { get; set; }
@@ -35,9 +51,27 @@ namespace Scholar
 
         public static Verify VerifyStudent(string username, string password)
         {
-            return new Request<Verify>("student/verify/u=" + username + "&p" + password).Send();
+            return new Request<Verify>("student/verify/u=" + username + "&p=" + password).Send();
+        }
+
+        public static Student GetInformation(string username)
+        {
+            return new Request<Student>("student/" + username).Send();
+        }
+
+        public static Classes GetClasses(string username)
+        {
+            return new Request<Classes>("student/" + username + "/classes").Send();
         }
     }
+
+    public class Students
+    {
+        public int error { get; set; }
+        public string[] students { get; set; }
+    }
+
+
     public class Class
     {
         public enum Grade
@@ -61,6 +95,11 @@ namespace Scholar
                 public string duration { get; set; }
                 public string teacher { get; set; }
             }
+        }
+
+        public static Students GetStudents(int index)
+        {
+            return new Request<Students>("class/" + index.ToString() + "/students").Send();
         }
 
         public static ClassInformation GetInformation(int index)
