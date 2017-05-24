@@ -8,6 +8,10 @@ using RestSharp;
 
 namespace Scholar
 {
+    public class Connector
+    {
+        public static string APIEndpoint { get; set; }
+    }
 
     [Serializable]
     public class ScholarRequestException : Exception
@@ -43,7 +47,7 @@ namespace Scholar
 
         public Request(string URL)
         {
-            client = new RestClient("http://localhost/Scholar/API/" + URL);
+            client = new RestClient(Connector.APIEndpoint + URL);
         }
     }
 }

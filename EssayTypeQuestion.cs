@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Scholar
 {
-    public class MCQPaper : Paper
+    public class EssayTypeQuestion
     {
-        public MCQQuestion[] questions { get; set; }
+        public string question { get; set; }
     }
 }

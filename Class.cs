@@ -8,6 +8,41 @@ namespace Scholar
 {
     public class Class
     {
+        public class MCQPapers {
+            public string error { get; set; }
+            public int[] papers { get; set; }
+        }
+
+        public class EssayTypePapers
+        {
+            public string error { get; set; }
+            public int[] papers { get; set; }
+        }
+
+        public EssayTypePapers GetEssayTypePapers(int index)
+        {
+            //class/{index}/paper/essaytype
+            return new Request<EssayTypePapers>("class/" + index.ToString() + "/paper/essaytype").Send();
+        }
+
+        public EssayTypePaper GetEssayTypePaper (int classindex, int index, string username, string password)
+        {
+            //class/{index}/paper/essaytype/0/u={username}&p={password}
+            return new Request<EssayTypePaper>("class/" + index.ToString() + "/paper/essaytype/" + index.ToString() + "/u=" + username + "&p=" + password).Send();
+        }
+
+        public MCQPapers GetMCQPapers(int index)
+        {
+            //class/{index}/paper/mcq
+            return new Request<MCQPapers>("class/" + index.ToString() + "/paper/mcq").Send();
+        }
+
+        public MCQPaper GetMCQPaper(int classindex, int index, string username, string password)
+        {
+            //class/{index}/paper/mcq/{index}/u={username}&p={password}
+            return new Request<MCQPaper>("class/" + classindex.ToString() + "/paper/mcq/" + index.ToString() + "/u=" + username + "&p=" + password).Send();
+        }
+
         public enum Grade
         {
             Grade1, Grade2, Grade3, Grade4, Grade5, Grade6, Grade7, Grade8, Grade9, OneYearToOL, TwoYearsToOL, OneYearToAL, TwoYearsToAL
